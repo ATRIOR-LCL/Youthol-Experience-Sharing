@@ -2,6 +2,7 @@
 @import url(../font/Conventional.less);
 @import url(../font/Thin.less);
 @import url(../color/backcolor.less);
+
 .front {
     width: 100vw;
     height: 100vh;
@@ -27,6 +28,7 @@
         color: @font-secondary-color;
         transition: transform .5s ease, opacity .5s ease;
         transition-delay: 1.5s;
+
         & img {
             display: block;
             height: 70%;
@@ -38,6 +40,7 @@
         }
 
     }
+
     & .title {
         width: 90%;
         aspect-ratio: 3/1;
@@ -64,13 +67,16 @@
             font-size: 5rem;
             color: @font-color;
             transition: transform .5s ease, opacity .5s ease;
+
             // position: absolute;
             &:nth-child(1) {
                 transition-delay: 0s !important;
             }
+
             &:nth-child(2) {
                 transition-delay: .5s;
             }
+
             & span {
                 &:nth-child(1) {
                     color: transparent;
@@ -78,6 +84,7 @@
                     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
                     // background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
                 }
+
                 &:nth-child(2) {
                     color: transparent;
                     background-clip: text;
@@ -108,6 +115,7 @@
             backdrop-filter: blur(30px);
             justify-content: center;
             align-items: center;
+
             &-container {
                 width: 100%;
                 height: 100%;
@@ -119,6 +127,7 @@
                 border-radius: 1rem;
                 backdrop-filter: blur(20px);
                 gap: 1rem;
+
                 & p {
                     font-family: 'JP Conventional';
                     font-size: 1.5rem;
@@ -126,6 +135,7 @@
                     line-height: 4rem;
                     transition: opacity 1.5s ease, filter 1s ease;
                 }
+
                 & .avatar {
                     display: block;
                     height: 4rem;
@@ -150,7 +160,7 @@
 
             & .vue {
                 transition-delay: .2s;
-                transform: translate(0,-6rem) scale(1.2);
+                transform: translate(0, -6rem) scale(1.2);
             }
 
             & .js {
@@ -165,13 +175,13 @@
 
             & .less {
                 transition-delay: .7s;
-                transform:translate(0, 7rem) scale(.5);
+                transform: translate(0, 7rem) scale(.5);
             }
 
             & .html {
                 transition-delay: .9s;
                 transform: translate(15rem, -5rem) scale(.7);
-                
+
             }
         }
 
