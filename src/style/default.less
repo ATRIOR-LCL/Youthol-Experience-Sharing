@@ -1,0 +1,36 @@
+@import url(./font/Conventional.less);
+@import url(./color/backcolor.less);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    user-select: none;
+}
+
+:root {
+    font-size: 20px;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'JP Conventional';
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+body::-webkit-scrollbar {
+    appearance: none;
+    width: 6px;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: @dark;
+    border-radius: 4px;
+}
