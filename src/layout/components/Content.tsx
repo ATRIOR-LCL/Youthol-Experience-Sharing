@@ -1,7 +1,7 @@
 import React from "react";
-import "../style/content/index.less";
-import Handous from "../components/Content/Handous";
-import Cards from "../components/Content/Cards";
+import "../../style/content/index.less";
+import Handous from "../../components/Content/Handous";
+import Cards from "../../components/Content/Cards";
 
 class Content extends React.Component {
   componentDidMount(): void {
@@ -15,7 +15,7 @@ class Content extends React.Component {
       let proption = content.getBoundingClientRect().top / window.innerHeight;
       if (proption <= 0) {
         let n = cards.length;
-        let index = Math.ceil((proption * n) / 11);
+        let index = Math.ceil((proption * n) / 11.5);
         index = Math.abs(index) - 1;
         for (let i = 0; i < n; i++) {
           if (i <= index) {

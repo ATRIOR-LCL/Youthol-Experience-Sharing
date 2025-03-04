@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Front from "./pages/Front";
-import Content from "./pages/Content";
+import Front from "./components/Front";
+import Content from "./components/Content";
 
 class App extends React.Component {
   componentDidMount(): void {

@@ -1,12 +1,12 @@
 import React from "react";
-import "../style/front/index.less";
-import avatar from "../assets/img/qq.png";
-import vue from "../assets/img/Vue.png";
-import react from "../assets/img/react.png";
-import js from "../assets/img/js.png";
-import ts from "../assets/img/ts.png";
-import less from "../assets/img/less.png";
-import html from "../assets/img/html.png";
+import "../../style/front/index.less";
+import avatar from "../../assets/img/qq.png";
+import vue from "../../assets/img/Vue.png";
+import react from "../../assets/img/react.png";
+import js from "../../assets/img/js.png";
+import ts from "../../assets/img/ts.png";
+import less from "../../assets/img/less.png";
+import html from "../../assets/img/html.png";
 
 class Front extends React.Component {
   componentDidMount(): void {
@@ -45,7 +45,7 @@ class Front extends React.Component {
           <h1 className="hb font-hide-b">
             你的 <span>JavaScript</span> 该『<span> 升级 </span>』了！
           </h1>
-          <h2 className="hc font-hide-c">— — —浏览器进程模型 / 事件循环</h2>
+          <h2 className="hc font-hide-c">— — —浏览器进程模型 / 声明式 UI</h2>
           <div className="title-box">
             <div className="title-box-container">
               <p className="slogan slogan-hide">

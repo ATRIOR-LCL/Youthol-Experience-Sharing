@@ -1,7 +1,7 @@
 import React from "react";
 import "../../style/content/cards.less";
 import Card from "./Card";
-import cardsArray from "../../utils/content/cardtitles";
+import cardsArray from "../../configs/cardtitles";
 
 class Cards extends React.Component {
   render(): React.ReactNode {
