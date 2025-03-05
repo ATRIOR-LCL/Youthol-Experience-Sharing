@@ -20,7 +20,7 @@ class Foot extends React.Component {
               <svg
               className="right"
                 xmlns="http://www.w3.org/2000/svg"
-                height="24px"
+                height="25px"
                 viewBox="0 -960 960 960"
                 width="20px"
                 fill="#FFFFFF"
