@@ -7,7 +7,6 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    user-select: none;
 }
 
 :root {
@@ -28,6 +27,10 @@ body::-webkit-scrollbar {
     appearance: none;
     width: 6px;
     background-color: transparent;
+}
+
+img {
+    -webkit-user-drag: none;
 }
 
 body::-webkit-scrollbar-thumb {

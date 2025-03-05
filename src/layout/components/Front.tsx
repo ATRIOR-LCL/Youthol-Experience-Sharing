@@ -13,22 +13,33 @@ class Front extends React.Component {
     const imgs = [
       ...document.querySelectorAll(".vue, .react, .js, .ts, .less, .html"),
     ];
-    const ht = [...document.querySelectorAll(".ht, footer")];
+    const ht = document.querySelector(".ht");
     const hb = document.querySelector(".hb");
     const hc = document.querySelector(".hc");
     const slogan = document.querySelector(".slogan");
     const avatar = document.querySelector(".avatar");
     const textture = document.querySelector(".textture") as HTMLElement;
+    const bts = [
+      ...(document.querySelectorAll(".bt-hide") as NodeListOf<HTMLElement>),
+    ];
     setTimeout(() => {
       imgs.forEach((img) => {
         img.classList.remove("img-default");
       });
-      ht.forEach((h) => {
-        h.classList.remove("font-hide-t");
-      });
+      ht?.classList.remove("font-hide-t");
       hb?.classList.remove("font-hide-b");
+      bts.forEach((bt, idnex) => {
+        if (bt) {
+          bt.style.transitionDelay = `${idnex * 0.1}s`;
+        }
+      });
       slogan?.classList.remove("slogan-hide");
       avatar?.classList.remove("avatar-hide");
+      setTimeout(() => {
+        bts.forEach((bt) => {
+          bt.classList.remove("bt-hide");
+        });
+      }, 1000);
       setTimeout(() => {
         hc?.classList.remove("font-hide-c");
         if (textture) {
@@ -45,7 +56,7 @@ class Front extends React.Component {
           <h1 className="hb font-hide-b">
             你的 <span>JavaScript</span> 该『<span> 升级 </span>』了！
           </h1>
-          <h2 className="hc font-hide-c">— — —浏览器进程模型 / 声明式 UI</h2>
+          <h2 className="hc font-hide-c">— — — 事件循环 / 声明式 UI</h2>
           <div className="title-box">
             <div className="title-box-container">
               <p className="slogan slogan-hide">
@@ -62,13 +73,22 @@ class Front extends React.Component {
           </div>
           <aside className="textture"></aside>
         </hgroup>
-        <footer className="font-hide-t">
-          <p>@2024 to Youthol by</p>
-          <img src={avatar} alt="" />
-          <a href="https://github.com/ATRIOR-LCL" target="_blank">
+        <footer>
+          <span className="bt bt-hide">@</span>
+          <span className="bt bt-hide">2024</span>
+          <span className="bt bt-hide"> to </span>
+          <span className="bt bt-hide">Youthol</span>
+          <span className="bt bt-hide"> by</span>
+          <img className="bt bt-hide" src={avatar} alt="" />
+          <a
+            className="bt bt-hide"
+            href="https://github.com/ATRIOR-LCL"
+            target="_blank"
+          >
             atrior
           </a>
-          <p>with ❤️</p>
+          <span className="bt bt-hide">with</span>
+          <span className="bt bt-hide"> ❤️</span>
         </footer>
       </div>
     );

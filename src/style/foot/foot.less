@@ -1,0 +1,78 @@
+@import url(../font/Blod.less);
+.foot {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-main {
+        width: 70%;
+        height: 60%;
+        border: 1rem solid #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap: 1rem;
+        & img {
+            display: block;
+            width: 30%;
+            aspect-ratio: 1/1;
+            border: 1rem solid #000;
+        }
+
+        & hgroup {
+            width: 60%;
+            & h1,h2 {
+                font-size: ;
+                line-height: 4rem;
+            }
+        }
+
+        & nav {
+            width: 10rem;
+            aspect-ratio: 3;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: -1rem;
+            bottom: 5rem;
+            gap: 1rem;
+            &:hover {
+                & div {
+                    transform-origin: left;
+                    transform: scaleX(1);
+                }
+
+                & .right {
+                    transform: translateX(.6rem);
+                }
+            }
+            & div {
+                width: 10rem;
+                height: 100%;
+                background-color: #000;
+                position: absolute;
+                transform-origin: right;
+                transition: transform 0.5s ease;
+                transform: scaleX(0);
+                
+            }
+            & a {
+                font-family: 'JP Blod';
+                color: #fff;
+                z-index: 2;
+                font-size: 1.3rem;
+            }
+
+            & .right {
+                transition: transform 0.5s ease;
+            }
+
+            
+        }
+    }
+}

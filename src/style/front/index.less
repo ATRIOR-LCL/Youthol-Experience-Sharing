@@ -28,6 +28,7 @@
         color: @font-secondary-color;
         transition: transform .5s ease, opacity .5s ease;
         transition-delay: 1.5s;
+        user-select: none;
 
         & img {
             display: block;
@@ -217,4 +218,14 @@
 .avatar-hide {
     transform: translateX(-11.5rem);
     opacity: 0;
+}
+
+.bt {
+    transition: .5s ease;
+
+    &-hide {
+        transform: translateY(5rem);
+        opacity: 0;
+        filter: blur(10px);
+    }
 }

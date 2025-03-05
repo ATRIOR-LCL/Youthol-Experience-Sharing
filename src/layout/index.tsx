@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Front from "./components/Front";
 import Content from "./components/Content";
+import Foot from "./components/Foot";
 
 class App extends React.Component {
   componentDidMount(): void {
@@ -15,6 +16,7 @@ class App extends React.Component {
       <>
         <Front />
         <Content />
+      <Foot />
       </>
     );
   }
