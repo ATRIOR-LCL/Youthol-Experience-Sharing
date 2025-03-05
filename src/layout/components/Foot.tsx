@@ -1,7 +1,6 @@
 import React from "react";
 import "../../style/foot/foot.less";
 import mortis from "../../assets/img/footer/mortise.jpg";
-import right from "../../assets/img/footer/right.png";
 
 class Foot extends React.Component {
   render(): React.ReactNode {
