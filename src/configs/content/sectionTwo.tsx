@@ -5,7 +5,7 @@ const sectionTwoArray: BoxProps[] = [
     title: "浏览器是一个多进程多线程的应用程序",
     detail: (
       <>
-        <span>浏览器的内部工作十分复杂</span><br /><br />
+        <span><b>浏览器的内部工作十分复杂</b></span><br /><br />
         <span>为了避免相互影响, 为了减少连环崩溃的几率没, 当启动浏览器后, 他会自动启动多个进程</span>
       </>
     )
