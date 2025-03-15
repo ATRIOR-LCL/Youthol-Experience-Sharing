@@ -43,7 +43,7 @@ class Front extends React.Component {
       setTimeout(() => {
         hc?.classList.remove("font-hide-c");
         if (textture) {
-          textture.style.height = "100%";
+          textture.style.transform = "scaleY(1)";
         }
       }, 1000);
     }, 0);

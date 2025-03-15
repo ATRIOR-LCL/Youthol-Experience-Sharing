@@ -9,9 +9,9 @@ class Foot extends React.Component {
         <main className="foot-main">
           <img src={mortis} alt="" />
           <hgroup>
-            <h1>OK，事件循环的学习就到此结束吧 🎉</h1>
-            <h2>因为我是用 React 写的，</h2>
-            <h2>所以对于 Vue 还是请看官方文档吧</h2>
+            <h1>OK，「事件循环」的学习就到此结束吧 🎉</h1>
+            <h2>因为我是用 <span className="r">React</span> 写的，</h2>
+            <h2>声明式 UI 还是看 <span className="v">Vue</span> 吧</h2>
             <nav>
               <div></div>
               <a href="https://cn.vuejs.org/" target="_blank">

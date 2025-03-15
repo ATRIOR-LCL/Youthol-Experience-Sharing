@@ -12,17 +12,17 @@ const cards: cardObject[] = [
     },
     {
         id: 2,
-        title: "浏览器有哪些进程和线程?📜",
+        title: "浏览器有哪些进程和线程📜",
         description: "浏览器是一个多进程多线程的应用程序",
     },
     {
         id: 3,
-        title: "渲染主线程是如何工作的?🎈",
+        title: "渲染主线程是如何工作的🎈",
         description: "最繁忙的线程 / 渲染主线程工作原理",
     },
     {
         id: 4,
-        title: "何为异步?🧸",
+        title: "何为异步🧸",
         description: "使用异步的方式, 渲染主线程永不阻塞",
     },
     {
@@ -32,7 +32,7 @@ const cards: cardObject[] = [
     },
     {
         id: 6,
-        title: "任务有优先级吗?🌟",
+        title: "任务有优先级吗🌟",
         description:
             "任务没有优先级, 在消息队列中先进先出但消息队列是有优先级的",
     },

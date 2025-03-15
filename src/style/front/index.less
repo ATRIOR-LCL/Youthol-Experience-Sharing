@@ -53,8 +53,10 @@
 
         & .textture {
             position: absolute;
-            transition: height .5s ease;
-            height: 0;
+            transform-origin: top;
+            transform: scaleY(0);
+            transition: transform .5s ease;
+            height: 100%;
             left: 0;
             width: 1rem;
             background-color: @dark;

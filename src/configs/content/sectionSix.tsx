@@ -11,7 +11,7 @@ const sectionSixArray: BoxProps[] = [
                     <li>每个任务都有一个任务类型, 同一个类型的任务必须在一个队列, 不同类型的任务可以分属于不同的队列, 再一次事件循环中, 浏览器可以根据实际情况从不同的队列中取出任务执行.</li>
                     <li>
                     浏览器必须准备好一个微队列 (microtask queue) , 微队列中的任务优先所有的其他任务执行
-                    </li>
+                    </li><br />
                     <small>随着浏览器的复杂度急剧提升, W3C 不再使用宏队列的说法</small>
                 </ul>
             </>
@@ -28,7 +28,9 @@ const sectionSixArray: BoxProps[] = [
                 <small>用于存放用户操作后产生的时间处理任务, 优先级 [高]</small>
                 <li>微队列</li>
                 <small>用户存放需要最快执行的任务, 优先级 [最高]</small>
-                <p>添加任务到微队列的主要方式是使用 Promise, MutationObserver
+                <br />
+                <br />
+                <p>添加任务到微队列的主要方式是使用 <b>Promise</b>, <b>MutationObserver </b>
                 例如:</p>
                 <pre>
                     <code className="language-js">
