@@ -8,13 +8,7 @@ type AppState = {
     height: number;
 }
 
-interface ContextProps {
-    height: number;
-}
 
-export var MyContext = React.createContext<ContextProps>({
-    height: 0
-});
 
 class App extends React.Component<{},AppState> {
     constructor(props: {}) {
@@ -31,11 +25,11 @@ class App extends React.Component<{},AppState> {
     }
     render(): React.ReactNode {
         return (
-            <MyContext.Provider value={{height: this.state.height}}>
+                <>
                 <Front />
                 <Content />
                 <Foot />
-            </MyContext.Provider>
+                </>
         );
     }
 }

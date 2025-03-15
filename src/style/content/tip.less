@@ -1,0 +1,32 @@
+.tip {
+    position: absolute;
+    width: 40%;
+    height: 10rem;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    &-message {
+        height: 40%;
+        width: 50%;
+        border-radius: .5rem;
+        display: grid;
+        place-items: center;
+        opacity: 0;
+        transition: opacity .5s ease;
+        & p {
+            width: 90%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &-logo {
+        display: block;
+        height: 60%;
+    }
+}

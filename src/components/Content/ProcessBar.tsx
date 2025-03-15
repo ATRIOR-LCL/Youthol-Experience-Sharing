@@ -1,9 +1,11 @@
 import React from "react";
 import '../../style/content/processbar.less'
-import { MyContext } from "../../layout";
+import cardsArray from "../../configs/cardtitles";
+import { cardContext } from "./Cards";
 
 interface LineProps {
-    toAction: number
+    toAction: number,
+    title: string
 }
 
 type BarState = {
@@ -36,7 +38,6 @@ class ProcessBar extends React.Component<{}, BarState> {
 
     private currentAction = (st: number, arr: HTMLElement[]) => {
         if (st >= window.innerHeight && st < 2 * window.innerHeight) {
-            console.log('yes');
             this.clearLinePropety(arr);
             this.setLinePropety(1);
         }
@@ -73,22 +74,14 @@ class ProcessBar extends React.Component<{}, BarState> {
 
     render(): React.ReactNode {
         return (
-            <MyContext.Consumer>
+            <div className="process-bar" >
                 {
-                    value => {
-                        return (
-                            <div className="process-bar" >
-                                {
-                                    [...Array(6)].map((_, index) => {
-                                        let action = (index * 2) * value.height + value.height;
-                                        return <ProcessLine key={index} toAction={action} />
-                                    })
-                                }
-                            </div>
-                        )
-                    }
+                    [...Array(6)].map((_, index) => {
+                        let action = (index * 2) * window.innerHeight + window.innerHeight
+                        return <ProcessLine title={cardsArray.arr[index].title} key={index} toAction={action} />
+                    })
                 }
-            </MyContext.Consumer>
+            </div>
         )
     }
 }
@@ -106,9 +99,17 @@ class ProcessLine extends React.Component<LineProps> {
     }
     render(): React.ReactNode {
         return (
-            <div className="process-bar-line" onClick={this.handleClick} ref={this.lineRef}>
-                <div className="process-bar-line-s"></div>
-            </div>
+            <cardContext.Consumer>
+                {
+                    (context) => {
+                        return (
+                            <div className="process-bar-line" onMouseEnter={() => context.updateTitle(this.props.title)} ref={this.lineRef} onClick={this.handleClick}>
+                                <div className="process-bar-line-s"></div>
+                            </div>
+                        )
+                    }
+                }
+            </cardContext.Consumer>
         )
     }
 }
