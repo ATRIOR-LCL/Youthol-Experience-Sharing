@@ -16,33 +16,44 @@ import block from '../../assets/img/handous/blocik.png';
 import async from '../../assets/img/handous/async.png';
 
 const images = [
-  process,
-  thread,
-  chromeProcess,
-  undefined,
-  undefined,
-  messageQueue,
-  block,
-  async
+    process,
+    thread,
+    chromeProcess,
+    undefined,
+    undefined,
+    messageQueue,
+    block,
+    async
 ]
 
-const sectionArray:BoxProps[] = [...sectionOneArray, ...sectionTwoArray, ...sectionThreeArray, ...sectionFourArray, ...sectionFiveArray, ...sectionSixArray];
+const sectionArray: BoxProps[] = [
+    ...sectionOneArray,
+    ...sectionTwoArray,
+    ...sectionThreeArray,
+    ...sectionFourArray,
+    ...sectionFiveArray,
+    ...sectionSixArray
+];
 
 class Handous extends React.Component {
-  render(): React.ReactNode {
-    return (
-      <div className="handous">
-        <div className="boxes">
-          {
-            sectionArray.map((sec, index)=> {
-              return <Box key={index} title={sec.title} imgUrl={images[index]} detail={sec.detail}>
-              </Box>
-            })
-          }
-        </div>
-      </div>
-    );
-  }
+    render(): React.ReactNode {
+        return (
+            <div className="handous">
+                <div className="boxes">
+                    {
+                        sectionArray.map((sec, index) => {
+                            return <Box
+                                key={index}
+                                title={sec.title}
+                                imgUrl={images[index]}
+                                detail={sec.detail}>
+                            </Box>
+                        })
+                    }
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Handous;

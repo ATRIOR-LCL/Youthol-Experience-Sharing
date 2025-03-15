@@ -1,0 +1,30 @@
+.process-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 20rem;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    // gap: 2rem;
+    align-items: center;
+
+    // /rgba(128, 128, 128, 0.537)
+    &-line {
+        --bar-color: rgba(128, 128, 128, 0.537);
+        width: 50%;
+        height: 1rem;
+        cursor: pointer;
+        z-index: 2;
+
+        &-s {
+            width: 100%;
+            border-radius: .2rem;
+            height: .2rem;
+            background-color: var(--bar-color);
+        }
+    }
+}

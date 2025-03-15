@@ -9,7 +9,7 @@ import less from "../../assets/img/less.png";
 import html from "../../assets/img/html.png";
 
 class Front extends React.Component {
-  componentDidMount(): void {
+  async componentDidMount() {
     const imgs = [
       ...document.querySelectorAll(".vue, .react, .js, .ts, .less, .html"),
     ];
