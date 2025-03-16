@@ -4,19 +4,9 @@ import Front from "./components/Front";
 import Content from "./components/Content";
 import Foot from "./components/Foot";
 
-type AppState = {
-    height: number;
-}
 
 
-
-class App extends React.Component<{},AppState> {
-    constructor(props: {}) {
-        super(props);
-        this.state = {
-            height: window.innerHeight
-        }
-    }
+class App extends React.Component {
     componentDidMount(): void {
         window.scrollTo({
             top: 0,
@@ -25,11 +15,11 @@ class App extends React.Component<{},AppState> {
     }
     render(): React.ReactNode {
         return (
-                <>
+            <>
                 <Front />
                 <Content />
                 <Foot />
-                </>
+            </>
         );
     }
 }
