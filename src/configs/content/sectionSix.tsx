@@ -33,7 +33,7 @@ const sectionSixArray: BoxProps[] = [
                 <p>添加任务到微队列的主要方式是使用 <b>Promise</b>, <b>MutationObserver </b>
                 例如:</p>
                 <pre>
-                    <code className="language-js">
+                    <code className="language-js hljs language-js">
                         {
                             'Promise.resolve().then(函数)'
                         }

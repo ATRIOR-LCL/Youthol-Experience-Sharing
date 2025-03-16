@@ -6,7 +6,7 @@ const sectionOneArray: BoxProps[] = [
     detail: (
       <>
         <span>
-          程序运行需要有他自己<b>专属的而内存空间</b>。<br /><br />
+          程序运行需要有他自己<b>专属的内存空间</b>。<br /><br />
           可以把这块内存空间简单的理解为进程。
         </span>
         <br />

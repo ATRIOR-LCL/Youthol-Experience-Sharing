@@ -96,9 +96,15 @@
                     justify-content: flex-end;
                     align-items: center;
 
+                    &:has(.dog:hover) {
+                        .noImg {
+                            opacity: 0;
+                        }
+                    }
+
                     & .noImg {
-                        width: 6rem;
-                        aspect-ratio: 2/1;
+                        width: 8rem;
+                        aspect-ratio: 3/1;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -106,9 +112,11 @@
                         margin-right: 2rem;
                         border-radius: .5rem;
                         border: .2rem solid #000;
+                        transition: opacity .4s ease;
                         & p {
                             font-family: JP Blod;
                             font-weight: 700;
+                            user-select: none;
                         }
 
                         &::after {
@@ -121,11 +129,29 @@
                             right: 0;
                             transform: translateX(100%);
                         }
+
+                        &::before {
+                            content: '';
+                            width: .7rem;
+                            aspect-ratio: 1/1;
+                            background-color: #fff;
+                            position: absolute;
+                            clip-path: polygon(0 0, 100% 50%, 0% 100%);
+                            right: 0;
+                            z-index: 2;
+                            transform: translateX(95%);
+                        }
                     }
 
                     & .dog {
                         width: 6rem;
                         aspect-ratio: 1/1;
+                        position: relative;
+                        transition: transform .5s ease;
+                        cursor: pointer;
+                        &:hover {
+                            transform: translateX(.5rem);
+                        }
                     }
 
                 }

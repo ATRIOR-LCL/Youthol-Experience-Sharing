@@ -10,17 +10,20 @@ const sectionFiveArray: BoxProps[] = [
 <h1>Hello World!</h1>
 <button>change</button>
 <script>
-    var h1 = document.querySelector('h1');
-    var button = document.querySelector('button');
-    // 死循环指定的时间
+    var h1 = document.querySelector("h1");
+    var button = document.querySelector("button");
+    /**
+     * 指定死循环时间
+     * @param {number} duration
+     */
     function delay(duration) {
         var start = Date.now();
         while (Date.now() - start < duration) {}
-    }
-    button.onclick = function() {
-        h1.textContent = 'Hello JavaScript!';
+    }   
+    button.onclick = function () {
+        h1.textContent = "Hello JavaScript!";
         delay(3000);
-    }
+    };
 </script>
                     `}
         </code>

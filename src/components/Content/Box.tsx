@@ -35,10 +35,9 @@ class Box extends React.Component<BoxProps> {
                     ) : (
                         <picture className="box-content-bottom">
                             <div className="noImg">
-                                <p>没图捏</p>
+                                <p>没图捏 (ノへ`、)</p>
                             </div>
                             <img src={dog} alt="" className="dog" />
-
                         </picture>
                     )}
                 </div>
